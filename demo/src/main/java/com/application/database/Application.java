@@ -11,12 +11,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class Application implements CommandLineRunner {
 	@Autowired
 	UserRepository ob;
-
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx = SpringApplication.run(Application.class, args);
 		ctx.close();
 	}
-
 	@Override
 	public void run(String... args) throws Exception {
 		// Insert data into the table
@@ -24,5 +22,9 @@ public class Application implements CommandLineRunner {
 
 		// repo.save method
 		ob.save(user);
+		System.out.println("Hello World");
+
+		// Print all entities
+		System.out.println(ob.getAllUsers());
 	}
 }

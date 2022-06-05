@@ -23,7 +23,6 @@ public class User {
         this.lastName = null;
         this.emailAddress = null;
         this.mobileNumber = 0;
-
     }
     public User(int UID, String firstName, String lastName, String emailAddress, int mobileNumber) {
         this.UID = UID;
