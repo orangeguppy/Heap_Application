@@ -36,6 +36,38 @@ public class User {
         this.dateOfBirth = utc.toLocalDate();
     }
 
+    public int getUID() {
+        return UID;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public int getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public Instant getDateTimeRegistered() {
+        return dateTimeRegistered;
+    }
+
+    public LocalDate getDateRegistered() {
+        return dateRegistered;
+    }
+
     public int getAge() {
         LocalDate dateNowInUTC = LocalDate.ofInstant(Instant.now(), ZoneId.of("Etc/UTC"));
         return Period.between(dateOfBirth, dateNowInUTC).getYears();
