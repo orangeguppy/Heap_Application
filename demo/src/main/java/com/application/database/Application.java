@@ -8,8 +8,10 @@ import com.application.database.entity.User;
 import com.application.database.repository.UserRepository;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.time.Month;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 @SpringBootApplication
 public class Application implements CommandLineRunner {
@@ -22,12 +24,12 @@ public class Application implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		// Insert data into the table
-		User user = new User(8, "Hello", "pokemon", "mudkip@gmail.com", 12345678, LocalDateTime.of(2015,
-				Month.JULY, 29, 19, 30, 40));
+		User user = new User("Sam", "Lim", ZonedDateTime.of(2016, 11, 30, 12, 45, 59, 1234, ZoneId.of("Etc/UTC")),
+				"mudkip@gmail.com", 87654321);
 
 		// repo.save method
 		ob.save(user);
 
-		System.out.println(ob.findAll());
+		System.out.println(ob.findByDateRegistered(LocalDate.of(2022, Month.JUNE, 7)));
 	}
 }
