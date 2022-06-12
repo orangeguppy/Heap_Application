@@ -28,5 +28,15 @@ public class Events {
     public Event () {
     }
 
-    public Event (
+    public Event (String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart, LocalDate registrationEnd, LocalDate startDateTime, LocalDate endDateTime ) {
+        this.eventName = eventName;
+        this.maxCapacity = maxCapacity;
+        this.eventLocation = eventLocation;
+        this.minAge = minAge;
+        this.dateTimeCreated = Instant.now();
+        this.registrationStart = registrationStart;
+        this.registrationEnd = registrationEnd;
+        this.startDateTime = startDateTime;
+        this.endDateTime = endDateTime;
+    }
 }
