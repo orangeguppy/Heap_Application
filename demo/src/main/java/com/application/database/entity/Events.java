@@ -25,10 +25,10 @@ public class Events {
     private LocalDate startDateTime;
     private LocalDate endDateTime;
 
-    public Event () {
+    public Events () {
     }
 
-    public Event (String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart, LocalDate registrationEnd, LocalDate startDateTime, LocalDate endDateTime ) {
+    public Events (String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart, LocalDate registrationEnd, LocalDate startDateTime, LocalDate endDateTime ) {
         this.eventName = eventName;
         this.maxCapacity = maxCapacity;
         this.eventLocation = eventLocation;
@@ -38,5 +38,9 @@ public class Events {
         this.registrationEnd = registrationEnd;
         this.startDateTime = startDateTime;
         this.endDateTime = endDateTime;
+    }
+
+    public Events getAllEvents () {
+        return 
     }
 }
