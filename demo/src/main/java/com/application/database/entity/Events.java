@@ -40,7 +40,38 @@ public class Events {
         this.endDateTime = endDateTime;
     }
 
-    public Events getAllEvents () {
-        return 
+    public int getEID() {
+        return EID;
+    }
+    public int getOID() {
+        return OID;
+    }
+    public String getEventName() {return eventName; }
+    public int getMaxCapacity() {
+        return maxCapacity;
+    }
+    public String getEventLocation() {
+        return eventLocation;
+    }
+    public int getMinAge() {
+        return minAge;
+    }
+    public LocalDate getDateTimeCreated() {
+        return dateTimeCreated;
+    }
+    public LocalDate getRegistrationStart() { return registrationStart; }
+    public LocalDate getRegistrationEnd() {
+        return registrationEnd;
+    }
+    public LocalDate getStartDateTime() {
+        return startDateTime;
+    }
+    public LocalDate getEndDateTime() {
+        return endDateTime;
+    }
+
+
+    public String toString() {
+        return String.format("EID=<%d>, OID=<%d>, Event Name=<%s>, Maximum Capacity=<%d>, Event Location=<%s>, Minimum Age=<%d>, ", EID, OID, eventName, maxCapacity, eventLocation, minAge);
     }
 }
