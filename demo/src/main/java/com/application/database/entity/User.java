@@ -1,9 +1,6 @@
 package com.application.database.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.*;
 
 @Entity
@@ -11,6 +8,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int UID;
+
     private String firstName;
     private String lastName;
     private LocalDate dateOfBirth; // User's birthday, in UTC
@@ -72,6 +70,8 @@ public class User {
         LocalDate dateNowInUTC = LocalDate.ofInstant(Instant.now(), ZoneId.of("Etc/UTC"));
         return Period.between(dateOfBirth, dateNowInUTC).getYears();
     }
+
+    @Override
     public String toString() {
         return String.format("UID=<%d> Name=<%s %s> %d ", UID, firstName, lastName, getAge());
     }

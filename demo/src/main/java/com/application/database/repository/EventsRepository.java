@@ -10,8 +10,6 @@ import java.util.Optional;
 
 public interface EventsRepository extends JpaRepository<Events, Integer> {
     List<Events> findAll();
-
-    Optional<Events> eventsfindByUId(int id);
-
+    Optional<Events> findByEID(int EID);
 
 }

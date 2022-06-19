@@ -10,8 +10,8 @@ import java.util.Optional;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
+    @Override
     List<User> findAll();
     Optional<User> findById(int id);
-
     List<User> findByDateRegistered(LocalDate dateRegistered);
 }
