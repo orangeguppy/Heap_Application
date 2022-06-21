@@ -1,21 +1,20 @@
-package com.application.database.entity;
+package com.application.database.entity.global;
 
 import javax.persistence.*;
 import java.time.*;
 
 @Entity
+@Table(name="user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int UID;
-
     private String firstName;
     private String lastName;
     private LocalDate dateOfBirth; // User's birthday, in UTC
     private String emailAddress;
     private int mobileNumber;
     private Instant dateTimeRegistered; // Exact UTC moment the user registered a new account
-
     private LocalDate dateRegistered; // date registered in UTC
 
     public User() {

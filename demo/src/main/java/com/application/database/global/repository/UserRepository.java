@@ -1,7 +1,7 @@
-package com.application.database.repository;
+package com.application.database.repository.global;
 
+import com.application.database.entity.global.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.application.database.entity.User;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;

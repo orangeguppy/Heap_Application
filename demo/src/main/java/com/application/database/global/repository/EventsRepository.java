@@ -1,8 +1,7 @@
-package com.application.database.repository;
+package com.application.database.repository.global;
 
 
-import com.application.database.entity.Events;
-import com.application.database.entity.User;
+import com.application.database.entity.global.Events;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
