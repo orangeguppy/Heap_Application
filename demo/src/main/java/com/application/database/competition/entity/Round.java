@@ -6,19 +6,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Score {
+public class Round {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int scoreID;
-    private int score;
+    private int roundID;
+    private String roundName;
+    private String description;
 
-    public Score() {
-        this.score = 0;
+    public Round () {
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public Round (String roundName, String description) {
+        this.roundName = roundName;
+        this.description = description;
     }
-
-    public int getScore () {return score;}
 }

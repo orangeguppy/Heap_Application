@@ -6,19 +6,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Score {
+public class Attendance {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int scoreID;
-    private int score;
+    private int attendanceID;
+    private boolean attendance;
 
-    public Score() {
-        this.score = 0;
+    public Attendance () {
+        this.attendance = false;
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public void setAttendance (boolean attendance) {
+        this.attendance = attendance;
     }
 
-    public int getScore () {return score;}
 }
