@@ -9,7 +9,11 @@ import javax.persistence.Id;
 public class Score {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int scoreID;
+    private int scoreID; // not used
+
+    private int UID;
+
+    private int roundName;
     private int score;
 
     public Score() {
