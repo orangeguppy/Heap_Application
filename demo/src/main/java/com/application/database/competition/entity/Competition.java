@@ -1,17 +1,29 @@
-package com.application.database.entity.competition;
-import com.application.database.entity.global.Events;
+package com.application.database.competition.entity;
+
 import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.time.LocalDate;
+import javax.persistence.Id;
 
 @Entity
-public class Competition extends Events {
+public class Competition {
+    @Id
+    private int EID; // event ID
     private int WID; // winner ID
-
     public Competition() {
     }
 
-    public Competition(String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart, LocalDate registrationEnd, LocalDate startDateTime, LocalDate endDateTime) {
-        super(eventName, maxCapacity, eventLocation, minAge, registrationStart, registrationEnd, startDateTime, endDateTime);
+    public Competition(int EID) {
+        this.EID = EID;
+    }
+
+    public int getEID() {
+        return EID;
+    }
+
+    public int getWID() {
+        return WID;
+    }
+
+    public void setWID(int WID) { // set the winner
+        this.WID = WID;
     }
 }

@@ -1,4 +1,4 @@
-package com.application.database.entity.global;
+package com.application.database.global.entity;
 
 import javax.persistence.*;
 import java.time.*;
@@ -17,11 +17,19 @@ public class User {
     private Instant dateTimeRegistered; // Exact UTC moment the user registered a new account
     private LocalDate dateRegistered; // date registered in UTC
 
+    // Login details
+    private String userName;
+
+    private String password;
+
     public User() {
     }
-    public User(String firstName, String lastName, ZonedDateTime dateOfBirth, String emailAddress, int mobileNumber) {
+    public User(String firstName, String lastName, String userName, String password, ZonedDateTime dateOfBirth, String emailAddress, int mobileNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
+
+        this.userName = userName;
+        this.password = password;
         this.emailAddress = emailAddress;
         this.mobileNumber = mobileNumber;
         this.dateTimeRegistered = Instant.now();
@@ -44,6 +52,10 @@ public class User {
     public String getLastName() {
         return lastName;
     }
+
+    public String getUserName() { return userName; }
+
+    public String getPassword() { return password; }
 
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
@@ -69,7 +81,6 @@ public class User {
         LocalDate dateNowInUTC = LocalDate.ofInstant(Instant.now(), ZoneId.of("Etc/UTC"));
         return Period.between(dateOfBirth, dateNowInUTC).getYears();
     }
-
     @Override
     public String toString() {
         return String.format("UID=<%d> Name=<%s %s> %d ", UID, firstName, lastName, getAge());

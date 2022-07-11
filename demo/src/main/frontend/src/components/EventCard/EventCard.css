@@ -1,0 +1,19 @@
+img {
+    height: 30vh;
+    width: 40vh;
+}
+
+.card {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: white;
+    align-items: center;
+    overflow: auto;
+    background-color: #F0F0F0;
+}
+
+h1 {
+    font-size: 24px;
+}

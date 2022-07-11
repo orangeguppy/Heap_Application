@@ -1,8 +1,9 @@
-package com.application.database.entity.competition;
+package com.application.database.competition.entity;
 
 import javax.persistence.*;
 import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
 
 @Entity
 public class Competitor {
@@ -22,6 +23,8 @@ public class Competitor {
     public Competitor(String cName, int UID) {
         this.cName = cName;
         this.UID = UID;
+        this.dateTimeRegistered = Instant.now();
+        this.dateRegistered = LocalDate.ofInstant(dateTimeRegistered, ZoneId.of("Etc/UTC"));
     }
 
     public int getCID() {
