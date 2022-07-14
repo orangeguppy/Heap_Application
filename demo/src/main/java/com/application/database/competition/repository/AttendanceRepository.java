@@ -6,5 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AttendanceRepository extends JpaRepository<Attendance, Integer> {
+// return attendance status for specific round of specific event (EID, roundName, UID)
 
+    // return attendance count or % (TBC)
 }

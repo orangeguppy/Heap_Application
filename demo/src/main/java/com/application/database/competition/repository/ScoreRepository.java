@@ -9,7 +9,12 @@ import java.util.Optional;
 
 @Repository
 public interface ScoreRepository extends JpaRepository<Score, Integer> {
-    Optional<Score> findByRoundNameAndUID(String roundName, int UID);
+    // return score of specific round for specific event for specific user (EID, roundName, UID)
+    Optional<Score> findByEIDAndRoundNameAndUID(int EID, String roundName, int UID);
+
+    // return highest, lowest, mean, median scores (TBC)
+
+    // return users with same specific score
 
 
 }

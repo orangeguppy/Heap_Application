@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CompetitorRepository extends JpaRepository<Competitor, Integer> {
+    // return all users involved in competition (including their roles)
+
+    // check if user is involved in particular competition (UID AND EID)
 }
