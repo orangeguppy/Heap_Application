@@ -16,8 +16,8 @@ public interface EventsRepository extends JpaRepository<Events, Integer> {
     List<Events> findAll();
     Optional<Events> findByEID(int EID);
     Optional<Events> findByEventName(String eventName);
-    Optional<Events> findByEventNameAndStartDate(String eventName, LocalDate startDate);
-    Optional<Events> findByStartDate(LocalDate startDate);
+    Optional<Events> findByEventNameAndStartDateTime(String eventName, LocalDate startDateTime);
+    Optional<Events> findByStartDateTime(LocalDate startDateTime);
 
     List<Events> findByEventNameContaining(String eventName);
 }

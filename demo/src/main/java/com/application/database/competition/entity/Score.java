@@ -11,6 +11,8 @@ public class Score {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int scoreID; // not used
 
+    private int EID;
+
     private int UID;
 
     private int roundName;
