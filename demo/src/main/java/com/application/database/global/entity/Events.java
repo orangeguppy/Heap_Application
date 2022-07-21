@@ -18,8 +18,10 @@ public class Events implements Serializable {
     private Instant dateTimeCreated; // Exact UTC moment that event was created
     private LocalDate registrationStart;
     private LocalDate registrationEnd;
-    private LocalDate startDateTime;
-    private LocalDate endDateTime;
+    private LocalDate startDate;
+    private LocalDate endDate;
+
+    private boolean isSameDay;
 
     private String type;
     private String description;
@@ -28,7 +30,7 @@ public class Events implements Serializable {
     }
 
     public Events (String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart,
-                   LocalDate registrationEnd, LocalDate startDateTime, LocalDate endDateTime) {
+                   LocalDate registrationEnd, LocalDate startDate, LocalDate endDate) {
         this.eventName = eventName;
         this.maxCapacity = maxCapacity;
         this.eventLocation = eventLocation;
@@ -36,11 +38,12 @@ public class Events implements Serializable {
         this.dateTimeCreated = Instant.now();
         this.registrationStart = registrationStart;
         this.registrationEnd = registrationEnd;
-        this.startDateTime = startDateTime;
-        this.endDateTime = endDateTime;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.isSameDay = (startDate == endDate);
     }
     public Events (String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart,
-                   LocalDate registrationEnd, LocalDate startDateTime, LocalDate endDateTime, String imageURL) {
+                   LocalDate registrationEnd, LocalDate startDate, LocalDate endDate, String imageURL) {
         this.eventName = eventName;
         this.maxCapacity = maxCapacity;
         this.eventLocation = eventLocation;
@@ -48,8 +51,8 @@ public class Events implements Serializable {
         this.dateTimeCreated = Instant.now();
         this.registrationStart = registrationStart;
         this.registrationEnd = registrationEnd;
-        this.startDateTime = startDateTime;
-        this.endDateTime = endDateTime;
+        this.startDate = startDate;
+        this.endDate= endDate;
         this.imageURL = imageURL;
     }
     public int getEID() {
@@ -75,11 +78,11 @@ public class Events implements Serializable {
     public LocalDate getRegistrationEnd() {
         return registrationEnd;
     }
-    public LocalDate getStartDateTime() {
-        return startDateTime;
+    public LocalDate getStartDate() {
+        return startDate;
     }
-    public LocalDate getEndDateTime() {
-        return endDateTime;
+    public LocalDate getEndDate() {
+        return endDate;
     }
 
     public String getDescription() { return description; }
