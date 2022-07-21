@@ -1,0 +1,38 @@
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.hero-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+}
+
+.hero-container > h1 {
+    color: #fff;
+    font-size: 100px;
+    font-family: 'Staatliches';
+    margin-top: 150px;
+}
+
+.hero-container > p {
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Staatliches';
+    margin-top: 8px;
+}
+
+.hero-btns {
+    margin-top: 8px;
+}
+
+.btns {
+    margin-top: 8px;
+}
