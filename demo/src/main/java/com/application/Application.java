@@ -46,7 +46,7 @@ public class Application implements CommandLineRunner {
 		userRepository.save(user);
 
 		// Create new competitor
-		Competitor comp = new Competitor("player1", 5);
+		Competitor comp = new Competitor(5);
 		competitorRepository.save(comp);
 
 		System.out.println("Users who registered today (LITERALLY today)");
