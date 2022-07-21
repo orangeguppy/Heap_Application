@@ -14,8 +14,12 @@ public class Attendance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int attendanceID;
-    
+
     private int UID; // of user
+
+    private int EID; // of event
+
+    private String roundName; // of specific event
     private boolean attendance;
 
     public Attendance () {
