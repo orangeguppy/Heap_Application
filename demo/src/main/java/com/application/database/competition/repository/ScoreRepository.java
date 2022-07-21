@@ -14,7 +14,7 @@ public interface ScoreRepository extends JpaRepository<Score, Integer> {
 
     // return highest, lowest, mean, median scores (TBC)
 
-    // return users with same specific score
+    // return users with same specific score (TBC)
 
 
 }
