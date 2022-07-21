@@ -1,10 +1,7 @@
 package com.application.database.global.repository;
 
-
 import com.application.database.global.entity.Events;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
@@ -15,9 +12,7 @@ import java.util.Optional;
 public interface EventsRepository extends JpaRepository<Events, Integer> {
     List<Events> findAll();
     Optional<Events> findByEID(int EID);
-    Optional<Events> findByEventName(String eventName);
-    Optional<Events> findByEventNameAndStartDateTime(String eventName, LocalDate startDate);
-    Optional<Events> findByStartDateTime(LocalDate startDate);
+    Optional<Events> findByStartDate(LocalDate startDate);
 
     List<Events> findByEventNameContaining(String eventName);
 }
