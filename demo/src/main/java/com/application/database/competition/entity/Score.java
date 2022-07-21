@@ -5,7 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity
+public class Score {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int scoreID; // not used
