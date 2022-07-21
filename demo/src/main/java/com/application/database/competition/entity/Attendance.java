@@ -14,6 +14,8 @@ public class Attendance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int attendanceID;
+
+    private int UID; // of user
     private boolean attendance;
 
     public Attendance () {
