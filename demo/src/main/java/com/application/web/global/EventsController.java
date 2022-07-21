@@ -23,14 +23,9 @@ public class EventsController {
         return eventsRepository.findAll();
     }
 
-    @GetMapping("/get-one/{id}")
+    @GetMapping("/get-event-by-eid/{id}")
     Optional<Events> getEventById(@PathVariable int id) {
         return eventsRepository.findByEID(id);
-    }
-
-    @GetMapping("/get-one-by-name/{eventName}")
-    Optional<Events> getByEventName(@PathVariable String eventName) {
-        return eventsRepository.findByEventName(eventName);
     }
 
     @GetMapping("/{input}")

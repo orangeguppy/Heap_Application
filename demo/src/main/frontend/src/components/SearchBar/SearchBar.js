@@ -5,14 +5,14 @@ import EventCard from '../EventCard/EventCard';
 
 function SearchBar({placeholder, input}) {
     const [search, setSearch] = useState("");
-    const [users, setUsers] = useState([]);
+    const [events, setEvents] = useState([]);
     const [query, setQuery] = useState('');
 
     useEffect(() => {
         fetch(`/events/${query}`)
-          .then((res) => res.json())
+          .then((response) => response.json())
           .then((data) => {
-            setUsers(data);
+            setEvents(data);
           })
           .catch((err) => {
             console.log(err);
@@ -33,20 +33,17 @@ function SearchBar({placeholder, input}) {
         <div className="search">
             <form onSubmit={getSearch} className="searchInputs">
                 <input type="text" placeholder={placeholder} value={search} onChange={updateSearch}/>
-                <Button className="filter"
-                    buttonSize="btn--square"
-                    buttonStyle="btn--filter">
-                        <i class="fa-solid fa-filter"></i>
-                </Button>
             </form>
 
             <div className="dataResult">
-                {users.map(data => (
+                {events.map(data => (
                     <EventCard
-                        key={data.EID}
+                        key={data.eid}
                         title={data.eventName}
-                        startDate={data.startDateTime}
+                        startDate={data.startDate}
                         image={data.imageURL}
+                        id={data.eid}
+                        description={data.description}
                     />
                 ))}
             </div>

@@ -1,6 +1,8 @@
 img {
     height: 30vh;
     width: 40vh;
+    margin-top: 3vh;
+
 }
 
 .card {
@@ -11,9 +13,32 @@ img {
     background: white;
     align-items: center;
     overflow: auto;
-    background-color: #F0F0F0;
+    background-color: white;
 }
 
-h1 {
-    font-size: 24px;
+.card > h1 {
+    font-size: 36px;
+    font-weight: 30px;
+    color: black;
+    margin-top: 10px;
+    font-family: 'Staatliches';
+}
+
+.card > h2 {
+    color: #9db3c0;
+}
+
+.card > h3 {
+    color: black;
+    margin-bottom: 20px;
+    margin-left: 3vh;
+    margin-right: 3vh;
+}
+
+p {
+    color: white;
+}
+
+a {
+  color: black;
 }

@@ -1,0 +1,56 @@
+.label {
+    color: #ff216e;
+    padding: 0px;
+    margin-top: 10px;
+}
+
+.details {
+    margin-right: 20vh;
+    margin-left: 20vh;
+}
+
+.details > h1 {
+    font-size: 48px;
+}
+
+.details > p {
+    color: black;
+}
+
+.display {
+    background-color: white;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+}
+
+.details > h3 {
+    color: black;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.text {
+
+}
+
+.details > h1 {
+    font-size: 36px;
+    font-weight: 30px;
+    color: black;
+    margin-top: 10px;
+    font-family: 'Staatliches';
+}
+.image {
+    height: 60vh;
+    width: 80vh;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.ViewEvent {
+    background-color: #1e1e20;
+    height: 200vh;
+    padding: 45px;
+    z-index: -1;
+}
+
