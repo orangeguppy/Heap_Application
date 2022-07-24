@@ -10,7 +10,7 @@ import java.time.Instant;
 public class EventRegistration {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int ERID;
+    private int ERID; // registration ID
 
     private int UID; // user participating in the event
 
