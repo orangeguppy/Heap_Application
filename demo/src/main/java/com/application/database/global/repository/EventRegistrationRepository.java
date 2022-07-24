@@ -1,8 +1,6 @@
 package com.application.database.global.repository;
 
-
 import com.application.database.global.entity.EventRegistration;
-import com.application.database.global.entity.Events;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
