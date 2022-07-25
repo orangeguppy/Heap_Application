@@ -5,7 +5,8 @@ const STYLES = [
     'btn--primary',
     'btn--outline',
     'btn--colHero',
-    'btn--filter'
+    'btn--filter',
+    'btn--join'
 ]
 
 const SIZES = [
