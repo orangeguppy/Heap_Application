@@ -17,7 +17,12 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/find-event" element={<FindEvent />} />
-                <Route path="/your-events" element={<YourEvents />} />
+
+                <Route path="/your-events/*">
+                    <Route index element = {<your-events />} />
+                    <Route path="sub1" element={<sub1 />} />
+                    <Route path="sub2" element={<sub2 />} />
+                </Route>
                 <Route path="/view-event/:id" element={<ViewEvent />} />
             </Routes>
         </Router>
