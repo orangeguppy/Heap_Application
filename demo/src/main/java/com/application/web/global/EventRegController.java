@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +19,9 @@ import java.util.Optional;
 public class EventRegController {
     @Autowired
     EventRegistrationRepository eventRegRepo;
+
+    @Autowired
+    EventsRepository eventsRepo;
 
     // When the submit button is clicked:
     /*
@@ -38,6 +42,16 @@ public class EventRegController {
 
     @GetMapping("/{uid}/{eventName}")
     List<EventRegistration> findEventsUserRegisteredFor(@PathVariable int uid, @PathVariable String eventName) {
-        return eventRegRepo.findByUIDAndEventNameContaining(uid, eventName);
+        List<EventRegistration> ret = new ArrayList<EventRegistration>();
+        List<Events> eventList = eventsRepo.findByEventNameContaining(eventName);
+        for (Events e : eventList) {
+            int eid = e.getEID();
+            for (EventRegistration eventReg : eventRegRepo.findAll()) {
+                if (eventReg.getEID() == eid && eventReg.getUID() == uid) {
+                    ret.add(eventReg);
+                }
+            }
+        }
+        return ret;
     }
 }

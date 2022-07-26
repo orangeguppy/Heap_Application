@@ -18,9 +18,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/find-event" element={<FindEvent />} />
-                <Route path="/your-participating-events" element={<YourParticipatingEvents />} />
                 <Route path="/view-event/:id" element={<ViewEvent />} />
-                <Route path="/managed-events" element={<ManagedEvents />} />
             </Routes>
         </Router>
     </>

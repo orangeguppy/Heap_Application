@@ -11,5 +11,8 @@ import java.util.Optional;
 public interface EventRegistrationRepository extends JpaRepository<EventRegistration, Integer> {
     List<EventRegistration> findAll();
     Optional<EventRegistration> findByEIDAndUID(int EID, int UID);
-    List<EventRegistration> findByUIDAndEventNameContaining(int UID, String eventName);
+
+    List<EventRegistration> findByEID(int EID);
+
+    List<EventRegistration> findByUID(int UID);
 }
