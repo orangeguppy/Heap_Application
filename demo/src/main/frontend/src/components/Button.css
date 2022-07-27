@@ -90,3 +90,13 @@
     font-size: 3vh;
     margin-left: -70px;
 }
+
+.btn--join {
+    background-color: #053F5C;
+    color: white;
+}
+
+.btn--join:hover {
+    background-color: #429EBD;
+    color: white;
+}

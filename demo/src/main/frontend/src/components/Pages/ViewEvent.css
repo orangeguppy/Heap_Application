@@ -1,7 +1,12 @@
 .label {
-    color: #ff216e;
+    color: black;
     padding: 0px;
     margin-top: 10px;
+    font-weight: 36px;
+}
+
+.date_end {
+    margin-bottom: 10px;
 }
 
 .details {
@@ -10,7 +15,7 @@
 }
 
 .details > h1 {
-    font-size: 48px;
+    font-size: 56px;
 }
 
 .details > p {
@@ -30,7 +35,7 @@
 }
 
 .text {
-
+    margin-bottom: 10px;
 }
 
 .details > h1 {
@@ -40,11 +45,13 @@
     margin-top: 10px;
     font-family: 'Staatliches';
 }
+
 .image {
     height: 60vh;
     width: 80vh;
     grid-column: 2;
     grid-row: 1;
+    margin-bottom: 40px;
 }
 
 .ViewEvent {
@@ -54,3 +61,31 @@
     z-index: -1;
 }
 
+.role-item {
+    font-size: 24px;
+}
+
+.register input {
+    background-color: white;
+    border-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 18px;
+    padding: 15px;
+    height: 3vh;
+    width: 350px;
+}
+
+label {
+    font-size: 36px;
+    font-weight: 30px;
+    color: black;
+    margin-top: 30px;
+    font-family: 'Staatliches';
+}
+
+.details > h1 {
+    font-size: 72px;
+    margin-bottom: 0px;
+    margin-top: 40px;
+}

@@ -5,7 +5,6 @@ import EventCard from '../EventCard/EventCard';
 import React, { useState, useEffect } from 'react';
 
 function FindEvent() {
-
     return(
         <div className="wrapper">
             <div className="FindEvent">
