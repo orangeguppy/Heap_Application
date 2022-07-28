@@ -8,6 +8,7 @@ import FindEvent from './components/Pages/FindEvent';
 import YourParticipatingEvents from './components/Pages/YourParticipatingEvents';
 import ViewEvent from './components/Pages/ViewEvent';
 import ManagedEvents from './components/Pages/ManagedEvents';
+import CreateEvent from './components/Pages/CreateEvent';
 
 function App() {
   console.log("Hello WorldS");
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/your-participating-events" element={<YourParticipatingEvents />} />
                 <Route path="/view-event/:id" element={<ViewEvent />} />
                 <Route path="/managed-events" element={<ManagedEvents />} />
+                <Route path="/create-event" element={<CreateEvent />} />
             </Routes>
         </Router>
     </>
