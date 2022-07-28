@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import '../../CreateEvent.css';
+import React, { useState } from 'react';
+import './CreateEvent.css';
 import {Link} from 'react-router-dom';
 
 function CreateEvent() {
