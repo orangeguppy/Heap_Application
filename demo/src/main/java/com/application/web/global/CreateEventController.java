@@ -18,17 +18,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/create-event")
-
 public class CreateEventController {
-
     @Autowired
     EventsRepository eventsRepo;
+    @GetMapping("/{eventName}/{maxCapacity}/{eventLocation}/{minAge}/{roles}")
+    String submitCreatedEvent(@PathVariable String eventName, @PathVariable int maxCapacity,
+                              @PathVariable String eventLocation, @PathVariable int minAge,
+                              @PathVariable String roles) {
 
-    @GetMapping("/{eventName}/{maxCapacity}/{eventLocation}/{minAge}/{registrationStart}/{registrationEnd}/{startDate}/{endDate}/{startTime}/{endTime}")
-    String submitCreatedEvent(@PathVariable String eventName, @PathVariable int maxCapacity, @PathVariable String eventLocation, @PathVariable int minAge, @PathVariable LocalDate registrationStart, @PathVariable LocalDate registrationEnd, @PathVariable LocalDate startDate, @PathVariable LocalDate endDate, @PathVariable LocalTime startTime, @PathVariable LocalTime endTime) {
-        Events entry = new Events(eventName, maxCapacity, eventLocation, minAge, registrationStart, registrationEnd, startDate, endDate, startTime, endTime);
+        Events entry = new Events(eventName, maxCapacity, eventLocation, minAge, roles);
         eventsRepo.save(entry);
         return "Event created successfully!";
     }
-
 }

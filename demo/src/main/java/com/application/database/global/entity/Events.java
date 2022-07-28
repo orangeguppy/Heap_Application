@@ -15,7 +15,6 @@ public class Events implements Serializable {
     private int maxCapacity;
     private String eventLocation;
     private int minAge;
-    private Instant dateTimeCreated; // Exact UTC moment that event was created
     private LocalDate registrationStart;
     private LocalDate registrationEnd;
     private LocalDate startDate;
@@ -33,19 +32,27 @@ public class Events implements Serializable {
     public Events () {
     }
 
-    public Events (String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart,
-                   LocalDate registrationEnd, LocalDate startDate, LocalDate endDate, LocalTime startTime, LocalTime endTime) {
+    public Events(String eventName, int maxCapacity, String eventLocation, int minAge, String roles) {
         this.eventName = eventName;
         this.maxCapacity = maxCapacity;
         this.eventLocation = eventLocation;
         this.minAge = minAge;
-        this.dateTimeCreated = Instant.now();
+        this.roles = roles;
+    }
+
+    public Events (String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart,
+                   LocalDate registrationEnd, LocalDate startDate, LocalDate endDate, LocalTime startTime, LocalTime endTime, String roles) {
+        this.eventName = eventName;
+        this.maxCapacity = maxCapacity;
+        this.eventLocation = eventLocation;
+        this.minAge = minAge;
         this.registrationStart = registrationStart;
         this.registrationEnd = registrationEnd;
         this.startDate = startDate;
         this.endDate = endDate;
         this.startTime = startTime;
         this.endTime = endTime;
+        this.roles = roles;
     }
     public Events (String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart,
                    LocalDate registrationEnd, LocalDate startDate, LocalDate endDate, String imageURL, LocalTime startTime, LocalTime endTime, String roles) {
@@ -53,7 +60,6 @@ public class Events implements Serializable {
         this.maxCapacity = maxCapacity;
         this.eventLocation = eventLocation;
         this.minAge = minAge;
-        this.dateTimeCreated = Instant.now();
         this.registrationStart = registrationStart;
         this.registrationEnd = registrationEnd;
         this.startDate = startDate;
@@ -78,9 +84,6 @@ public class Events implements Serializable {
     }
     public int getMinAge() {
         return minAge;
-    }
-    public Instant getDateTimeCreated() {
-        return dateTimeCreated;
     }
     public LocalDate getRegistrationStart() { return registrationStart; }
     public LocalDate getRegistrationEnd() {
