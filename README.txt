@@ -9,5 +9,3 @@ To run the application(using IntelliJ):
 1. Run the application.java file
 2. Cd into the frontend folder
 3. npm start
-
-
