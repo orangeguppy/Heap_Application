@@ -9,6 +9,7 @@ import ParticipatingEvents from './components/Pages/ParticipatingEvents';
 import ViewEvent from './components/Pages/ViewEvent';
 import ManagedEvents from './components/Pages/ManagedEvents';
 import RegisterAccount from './components/Pages/RegisterAccount';
+import LoginSuccess from './components/Pages/LoginSuccess';
 
 function App() {
   console.log("Hello WorldS");
@@ -23,7 +24,7 @@ function App() {
                 <Route path="/register-account" element={<RegisterAccount />} />
                 <Route path="/participating-events" element={<ParticipatingEvents />} />
                 <Route path="/managed-events" element={<ManagedEvents />} />
-
+                <Route path="/login-success" element={<LoginSuccess />} />
             </Routes>
         </Router>
     </>

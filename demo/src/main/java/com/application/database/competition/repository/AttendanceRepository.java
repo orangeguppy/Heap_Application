@@ -1,11 +1,9 @@
 package com.application.database.competition.repository;
 
-import com.application.database.competition.entity.Attendance;
-import com.application.database.global.entity.Events;
+import com.application.database.competition.repository.entity.Attendance;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 

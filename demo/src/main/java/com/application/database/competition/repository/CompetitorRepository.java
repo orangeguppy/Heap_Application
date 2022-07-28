@@ -1,6 +1,6 @@
 package com.application.database.competition.repository;
 
-import com.application.database.competition.entity.Competitor;
+import com.application.database.competition.repository.entity.Competitor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.application.database.competition.entity;
+package com.application.database.competition.repository.entity;
 
 import com.application.database.global.entity.Events;
 

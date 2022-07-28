@@ -1,7 +1,6 @@
 package com.application.database.competition.repository;
 
-import com.application.database.competition.entity.Round;
-import com.application.database.global.entity.Events;
+import com.application.database.competition.repository.entity.Round;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

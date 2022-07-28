@@ -9,17 +9,22 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int UID;
+    //@Column(nullable = false, length = 45)
     private String firstName;
+    //@Column(nullable = false, length = 45)
     private String lastName;
     private LocalDate dateOfBirth; // User's birthday, in UTC
+    //@Column(nullable = false, unique = true, length = 255)
     private String emailAddress;
     private int mobileNumber;
     private Instant dateTimeRegistered; // Exact UTC moment the user registered a new account
     private LocalDate dateRegistered; // date registered in UTC
 
     // Login details
+    //@Column(nullable = false, length = 255)
     private String userName;
 
+    //@Column(nullable = false, length = 64)
     private String password;
 
     public User() {
