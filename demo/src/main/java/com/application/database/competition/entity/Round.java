@@ -10,7 +10,9 @@ public class Round {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int roundID;
+    private int roundID; // not used
+
+    private int EID;
     private String roundName;
     private String description;
 
@@ -21,4 +23,17 @@ public class Round {
         this.roundName = roundName;
         this.description = description;
     }
+
+    public int getEID() {
+        return EID;
+    }
+
+    public String getRoundName() {
+        return roundName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
 }
