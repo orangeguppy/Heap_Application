@@ -1,0 +1,34 @@
+.searchInputs {
+    display: flex;
+    justify-content: center;
+}
+
+.search input {
+    background-color: white;
+    border-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 18px;
+    padding: 15px;
+    height: 6vh;
+    width: 100vh;
+    margin-top: 5vh;
+}
+
+.searchIcon {
+    height: 60px;
+    width: 50px;
+    background-color: white;
+    display: grid;
+    place-items: center;
+}
+
+input: focus {
+    outline: none;
+}
+
+.dataResult {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

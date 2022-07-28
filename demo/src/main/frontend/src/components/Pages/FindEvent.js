@@ -1,4 +1,3 @@
-import EventsList from '../EventsTable/EventsList';
 import SearchBar from '../SearchBar/SearchBar';
 import './FindEvent.css';
 import EventCard from '../EventCard/EventCard';

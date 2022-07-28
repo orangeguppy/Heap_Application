@@ -46,7 +46,6 @@ public class Application implements CommandLineRunner {
 		//Create new competition
 //		addNewCompetition("DANCE", 149, "SMU", 10, LocalDate.of(2019, Month.JANUARY, 3),
 //				LocalDate.of(2019, Month.JANUARY, 3), LocalDate.of(2019, Month.JANUARY, 3), LocalDate.of(2019, Month.JANUARY, 3));
-
 	}
 
 //	public void addNewCompetition(String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart, LocalDate registrationEnd, LocalDate startDateTime, LocalDate endDateTime) {

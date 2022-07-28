@@ -10,8 +10,13 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'Your Events',
-        url: 'your-events',
+        title: 'Participating Events',
+        url: 'participating-events',
+        cName: 'nav-links'
+    },
+    {
+        title: 'Managed Events',
+        url: 'managed-events',
         cName: 'nav-links'
     },
     {

@@ -1,8 +1,11 @@
+import React, { Component, useState, useEffect } from 'react';
+import ManagedEventsSearch from '../ManagedEventsSearch/ManagedEvents';
+import EventCard from '../EventCard/EventCard';
+
 function ManagedEvents() {
     return(
         <div>
-            <h1>Text is here</h1>
-            <button>Click</button>
+            <ManagedEventsSearch placeholder="Search for events you're managing..."/>
         </div>
     )
 }
