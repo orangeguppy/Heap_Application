@@ -39,7 +39,22 @@ function CreateEvent() {
             <h3> Signups End Date </h3>
             <input type="datetime-local" />
             <h2> Alerts </h2>
-            //tbc
+                const accountSid = '[AccountSid]';
+                const authToken = '[authToken]';
+                const client = require('twilio')(accountSid, authToken);
+
+                delta_days = 0
+
+                if (delta_days == 1){
+                    client.messages
+                        .create({
+                            body: 'Your appointment is coming up on July 29 at 3PM ok?',
+                            from: 'whatsapp:+14155238886',
+                            to: 'whatsapp:+6587269341'
+                        })
+                        .then(message => console.log(message.sid))
+                        .done();
+                }
 
 
             <button>Click</button>
