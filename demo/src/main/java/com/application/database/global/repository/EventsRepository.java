@@ -11,8 +11,12 @@ import java.util.Optional;
 @Repository
 public interface EventsRepository extends JpaRepository<Events, Integer> {
     List<Events> findAll();
-    Optional<Events> findByEID(int EID);
+    Events findByEID(int EID);
     Optional<Events> findByStartDate(LocalDate startDate);
 
     List<Events> findByEventNameContaining(String eventName);
+
+    List<Events> findByOID(int OID);
+
+    List<Events> findByOIDAndEventNameContaining(int OID, String eventName);
 }

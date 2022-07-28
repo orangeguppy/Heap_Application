@@ -9,7 +9,7 @@ public class Events implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int EID;
 
-    private int OID;
+    private int OID; // UserID who organised the event
 
     private String eventName;
     private int maxCapacity;

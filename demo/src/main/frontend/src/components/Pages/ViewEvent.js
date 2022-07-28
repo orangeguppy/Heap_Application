@@ -32,9 +32,9 @@ function ViewEvent() {
     }, []);
 
     const handleSubmit = (e) => {
-        console.log("${id}");
+        console.log(role);
         e.preventDefault();
-        fetch(`/event-registration/36/2/audience`)
+        fetch(`/event-registration/${id}/2/${role}`)
             .then((response) => response.json())
             .then((data) => {
             })
@@ -69,11 +69,13 @@ function ViewEvent() {
                         <form className="register" onSubmit= {(e) => { handleSubmit(e) }}>
                             <label>
                                 Role:
-                            <input type="text" name="_role" />
+                            <input type="text" name="_role" onChange={event => setRole(event.target.value)}
+                                                                      value={role}/>
                           </label>
                           <div><br /></div>
                           <Button
                             onClick= {(e) => { handleSubmit(e) }}
+                            onClick={() => setButtonPopup(false)}
                             >
                           Submit Registration
                           </Button>
