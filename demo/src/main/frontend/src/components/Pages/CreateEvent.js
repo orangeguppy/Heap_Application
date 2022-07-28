@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 function CreateEvent() {
 const [eventName, setEventName] = useState('');
 const [eventDescription, setEventDescription] = useState('');
-const [eventDescription, setEventDescription] = useState('Competition');
+const [eventType, setEventType] = useState('Competition');
 const [eventStartDate, setEventStartDate] = useState(); //tbc
 const [eventEndDate, setEventEndDate] = useState(); //tbc
 const [eventLocation, setEventLocation] = useState('');
