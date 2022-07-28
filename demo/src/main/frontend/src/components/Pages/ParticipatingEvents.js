@@ -7,7 +7,7 @@ function ParticipatingEvents() {
     return(
         <div className="wrapper">
             <div className="FindPartEvent">
-                <PartEventsSearch placeholder="Find something..." />
+                <PartEventsSearch placeholder="Search for events you're participating in..." />
             </div>
         </div>
     )

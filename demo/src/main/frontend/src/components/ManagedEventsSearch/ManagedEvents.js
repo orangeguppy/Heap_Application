@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from 'react';
-import './SearchBar.css';
 import { Button } from "../Button";
 import EventCard from '../EventCard/EventCard';
+import './ManagedEvents.css'
 
 function ManagedEventsSearch({placeholder, input}) {
     const [search, setSearch] = useState("");
