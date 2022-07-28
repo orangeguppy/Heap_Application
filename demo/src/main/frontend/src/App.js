@@ -7,6 +7,7 @@ import Home from './components/Pages/Home';
 import FindEvent from './components/Pages/FindEvent';
 import YourEvents from './components/Pages/YourEvents';
 import ViewEvent from './components/Pages/ViewEvent';
+import ContactUs from './components/Pages/ContactUs';
 
 function App() {
   console.log("Hello WorldS");
@@ -18,12 +19,9 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/find-event" element={<FindEvent />} />
 
-                <Route path="/your-events/*">
-                    <Route index element = {<your-events />} />
-                    <Route path="sub1" element={<sub1 />} />
-                    <Route path="sub2" element={<sub2 />} />
-                </Route>
+                <Route path="/your-events/*" element = {<YourEvents />} />
                 <Route path="/view-event/:id" element={<ViewEvent />} />
+                <Route path="/contact-us" element={<ContactUs />} />
             </Routes>
         </Router>
     </>
