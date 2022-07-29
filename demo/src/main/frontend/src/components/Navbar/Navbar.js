@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems";
 import './Navbar.css';
 import { Button } from "../Button";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class Navbar extends Component {
     state = { clicked: false }
@@ -29,7 +30,9 @@ class Navbar extends Component {
                         )
                     })}
                 </ul>
-                <Button>Sign Up</Button>
+                <Link to={`/create-event`}>
+                <Button>Create Event</Button>
+                </Link>
             </nav>
         )
     }

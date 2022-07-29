@@ -10,11 +10,6 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'Create Event',
-        url: '/create-event',
-        cName: 'nav-links'
-    },
-    {
         title: 'Participating Events',
         url: '/participating-events',
         cName: 'nav-links'
@@ -30,8 +25,8 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'Sign Up',
-        url: '/sign-up',
+        title: 'Create Event',
+        url: '/create-event',
         cName: 'nav-links-mobile'
     },
 ]
