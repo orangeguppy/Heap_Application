@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './CreateEvent.css';
 import {Link} from 'react-router-dom';
 import { Button } from '../Button';
+import Popup from '../Popup'
 
 function CreateEvent() {
 const [eventName, setEventName] = useState('');
@@ -21,6 +22,8 @@ const [minAge, setMinAge] = useState(0);
 
 const [startTime, setStartTime] = useState();
 const [endTime, setEndTime] = useState();
+
+const [buttonPopup, setButtonPopup] = useState(false);
 
     const handleSubmit = (e) => {
         console.log("calling");
@@ -169,8 +172,13 @@ const [endTime, setEndTime] = useState();
             <div><br /></div>
 
             </form>
-            <Button onClick= {(e) => { handleSubmit(e) }}>Create Event</Button>
+            <Button onClick= {(e) => { handleSubmit(e) }} onClick={() => setButtonPopup(true)}>Create Event</Button>
             </div>
+
+            <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+                <h1>Insert stuff here</h1>
+
+            </Popup>
         </div>
     )
 }
