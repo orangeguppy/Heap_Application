@@ -10,7 +10,7 @@ function ContactUs() {
     const handleSubmit = (e) => {
         console.log("calling");
         e.preventDefault();
-        fetch(`/create-event/${name}/${email}/${message}`)
+        fetch(`/feedback/${name}/${email}/${message}`)
             .then((response) => response.json())
             .then((data) => {
             })
@@ -45,7 +45,7 @@ function ContactUs() {
                                 value={message}></textarea>
 
                             <div><br /></div>
-                            <Button onClick>Submit</Button>
+                            <Button onClick= {(e) => { handleSubmit(e) }}>Submit</Button>
                         </form>
                     </div>
                 </div>
