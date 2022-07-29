@@ -3,6 +3,8 @@ package com.application.database.global.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.*;
+import java.time.format.DateTimeFormatter;
+
 @Entity
 public class Events implements Serializable {
     @Id
@@ -38,6 +40,11 @@ public class Events implements Serializable {
         this.eventLocation = eventLocation;
         this.minAge = minAge;
         this.roles = roles;
+
+        this.startDate = LocalDate.of(2001, 1, 3);
+        this.endDate = LocalDate.of(2001, 1, 5);;
+        this.startTime = LocalTime.parse("12:32:22", DateTimeFormatter.ISO_TIME);
+        this.endTime = LocalTime.parse("18:40:22", DateTimeFormatter.ISO_TIME);
     }
 
     public Events (String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart,
