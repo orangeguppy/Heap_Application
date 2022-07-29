@@ -48,7 +48,7 @@ function ViewEvent() {
                 <div className="details">
                     <h1 className="title">{events.eventName}</h1>
                     <h2 className="label">Date and Time</h2>
-                    <h3 className = "date">Start: {events.startDate}</h3>
+                    <h3 className = "subtext">Start: {events.startDate}</h3>
                     <h3 className = "subtext">End: {events.endDate}</h3>
                     <h3 className = "subtext">{events.startTime} to {events.endTime}</h3>
 

@@ -1,3 +1,5 @@
+
+
 .contact-wrapper {
     background-color: #1e1e20;
     height: 90vh;
@@ -5,8 +7,50 @@
     z-index: -1;
     grid-template-columns: 1.5fr 1fr;
     display: grid;
+    align-items: center;
 }
 
 .contact-form {
     background-color: white;
+    display: flex;
+    padding:40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+    align-items: center;
+    border-radius:10px;
+
+}
+
+.main-container{
+    background-image: url("../../resources/images/contact-phone-notepad.jpg");
+    backgroundPosition: center;
+    backgroundSize: cover;
+    backgroundRepeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+
+
+
+}
+
+.contact-title {
+    font-size: 56px;
+    font-weight: 30px;
+    color: black;
+    margin: 10px;
+    font-family: 'serif';
+    align-items: center;
+}
+
+.contact-components {
+    font-size: 10px;
+    font-weight: 30px;
+    color: black;
+    font-family: 'serif';
+    text-align: center;
+    align-items: center;
+
 }

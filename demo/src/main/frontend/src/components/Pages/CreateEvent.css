@@ -2,16 +2,19 @@
 
 .creating-events {
     background-color: #1e1e20;
-    height: 120vh;
-    padding: 50px;
+
+    height: 350vh;
+    margin:0px;
     display: flex;
+
 }
 
 .form-wrapper {
-    background-color: white;
+    background-image: url("../../resources/images/form_background.jpg");
     align-items: center;
     text-align: center;
-    height: 110vh;
+    height: 330vh;
+    width: 100vw;
 }
 
 .form-wrapper > h1 {
@@ -20,6 +23,16 @@
     color: black;
     margin-top: 10px;
     font-family: 'Staatliches';
+}
+
+.tag-item{
+    background-color: rgb(0,0,0);
+    display: inline-block;
+    font-size:56px;
+    color: white;
+    padding: 10px;
+    margin: 30px;
+    border-radius:10px;
 }
 
 /* base styles */

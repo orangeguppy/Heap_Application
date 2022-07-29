@@ -26,6 +26,7 @@
     background-color: white;
     grid-template-columns: 1fr 1fr;
     display: grid;
+    height: 110vh;
 }
 
 .details > h3 {
@@ -92,4 +93,9 @@ label {
 
 .join-btn {
     padding: 10vh;
+}
+
+.subtext {
+    color: grey;
+    font-color: grey;
 }
