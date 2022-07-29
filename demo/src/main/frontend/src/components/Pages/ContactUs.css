@@ -1,0 +1,12 @@
+.contact-wrapper {
+    background-color: #1e1e20;
+    height: 90vh;
+    padding: 45px;
+    z-index: -1;
+    grid-template-columns: 1.5fr 1fr;
+    display: grid;
+}
+
+.contact-form {
+    background-color: white;
+}

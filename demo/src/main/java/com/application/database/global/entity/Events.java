@@ -9,19 +9,22 @@ public class Events implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int EID;
 
-    private int OID;
+    private int OID; // UserID who organised the event
 
     private String eventName;
     private int maxCapacity;
     private String eventLocation;
     private int minAge;
-    private Instant dateTimeCreated; // Exact UTC moment that event was created
     private LocalDate registrationStart;
     private LocalDate registrationEnd;
     private LocalDate startDate;
     private LocalDate endDate;
 
-    private boolean isSameDay;
+    private LocalTime startTime;
+
+    private LocalTime endTime;
+
+    private String roles;
 
     private String type;
     private String description;
@@ -29,31 +32,42 @@ public class Events implements Serializable {
     public Events () {
     }
 
-    public Events (String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart,
-                   LocalDate registrationEnd, LocalDate startDate, LocalDate endDate) {
+    public Events(String eventName, int maxCapacity, String eventLocation, int minAge, String roles) {
         this.eventName = eventName;
         this.maxCapacity = maxCapacity;
         this.eventLocation = eventLocation;
         this.minAge = minAge;
-        this.dateTimeCreated = Instant.now();
+        this.roles = roles;
+    }
+
+    public Events (String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart,
+                   LocalDate registrationEnd, LocalDate startDate, LocalDate endDate, LocalTime startTime, LocalTime endTime, String roles) {
+        this.eventName = eventName;
+        this.maxCapacity = maxCapacity;
+        this.eventLocation = eventLocation;
+        this.minAge = minAge;
         this.registrationStart = registrationStart;
         this.registrationEnd = registrationEnd;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.isSameDay = (startDate == endDate);
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.roles = roles;
     }
     public Events (String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart,
-                   LocalDate registrationEnd, LocalDate startDate, LocalDate endDate, String imageURL) {
+                   LocalDate registrationEnd, LocalDate startDate, LocalDate endDate, String imageURL, LocalTime startTime, LocalTime endTime, String roles) {
         this.eventName = eventName;
         this.maxCapacity = maxCapacity;
         this.eventLocation = eventLocation;
         this.minAge = minAge;
-        this.dateTimeCreated = Instant.now();
         this.registrationStart = registrationStart;
         this.registrationEnd = registrationEnd;
         this.startDate = startDate;
         this.endDate= endDate;
         this.imageURL = imageURL;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.roles = roles;
     }
     public int getEID() {
         return EID;
@@ -70,9 +84,6 @@ public class Events implements Serializable {
     }
     public int getMinAge() {
         return minAge;
-    }
-    public Instant getDateTimeCreated() {
-        return dateTimeCreated;
     }
     public LocalDate getRegistrationStart() { return registrationStart; }
     public LocalDate getRegistrationEnd() {
@@ -92,5 +103,17 @@ public class Events implements Serializable {
     public String getType() { return type; }
     public String toString() {
         return String.format("EID=<%d>, OID=<%d>, Event Name=<%s>, Maximum Capacity=<%d>, Event Location=<%s>, Minimum Age=<%d>, ", EID, OID, eventName, maxCapacity, eventLocation, minAge);
+    }
+
+    public LocalTime getStartTime() {
+        return startTime;
+    }
+
+    public LocalTime getEndTime() {
+        return endTime;
+    }
+
+    public String getRoles() {
+        return roles;
     }
 }

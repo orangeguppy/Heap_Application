@@ -5,8 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './components/Pages/Home';
 import FindEvent from './components/Pages/FindEvent';
-import YourEvents from './components/Pages/YourEvents';
+import ParticipatingEvents from './components/Pages/ParticipatingEvents';
 import ViewEvent from './components/Pages/ViewEvent';
+import ManagedEvents from './components/Pages/ManagedEvents';
+import ContactUs from './components/Pages/ContactUs';
+import CreateEvent from './components/Pages/CreateEvent';
 
 function App() {
   console.log("Hello WorldS");
@@ -17,8 +20,11 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/find-event" element={<FindEvent />} />
-                <Route path="/your-events" element={<YourEvents />} />
                 <Route path="/view-event/:id" element={<ViewEvent />} />
+                <Route path="/participating-events" element={<ParticipatingEvents />} />
+                <Route path="/managed-events" element={<ManagedEvents />} />
+                <Route path="/contact-us" element={<ContactUs />} />
+                <Route path="/create-event" element={<CreateEvent />} />
             </Routes>
         </Router>
     </>

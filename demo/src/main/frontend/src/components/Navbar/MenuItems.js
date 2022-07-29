@@ -6,22 +6,32 @@ export const MenuItems = [
     },
     {
         title: 'Find Events',
-        url: 'find-event',
+        url: '/find-event',
         cName: 'nav-links'
     },
     {
-        title: 'Your Events',
-        url: 'your-events',
+        title: 'Create Event',
+        url: '/create-event',
+        cName: 'nav-links'
+    },
+    {
+        title: 'Participating Events',
+        url: '/participating-events',
+        cName: 'nav-links'
+    },
+    {
+        title: 'Managed Events',
+        url: '/managed-events',
         cName: 'nav-links'
     },
     {
         title: 'Contact Us',
-        url: 'contact-us',
+        url: '/contact-us',
         cName: 'nav-links'
     },
     {
         title: 'Sign Up',
-        url: 'sign-up',
+        url: '/sign-up',
         cName: 'nav-links-mobile'
     },
 ]

@@ -1,16 +1,12 @@
 package com.application;
 
-import com.application.database.competition.entity.Competition;
-import com.application.database.competition.entity.Competitor;
 import com.application.database.competition.repository.CompetitionRepository;
 import com.application.database.competition.repository.CompetitorRepository;
-import com.application.database.global.entity.Events;
 import com.application.database.global.repository.EventsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import com.application.database.global.entity.User;
 import com.application.database.global.repository.UserRepository;
 import org.springframework.context.ConfigurableApplicationContext;
 
@@ -50,8 +46,8 @@ public class Application implements CommandLineRunner {
 		//Create new competition
 //		addNewCompetition("DANCE", 149, "SMU", 10, LocalDate.of(2019, Month.JANUARY, 3),
 //				LocalDate.of(2019, Month.JANUARY, 3), LocalDate.of(2019, Month.JANUARY, 3), LocalDate.of(2019, Month.JANUARY, 3));
-
 	}
+
 //	public void addNewCompetition(String eventName, int maxCapacity, String eventLocation, int minAge, LocalDate registrationStart, LocalDate registrationEnd, LocalDate startDateTime, LocalDate endDateTime) {
 //		Events event = new Events(eventName, maxCapacity, eventLocation,minAge, registrationStart, registrationEnd, startDateTime, endDateTime,
 //				"https://st2.depositphotos.com/3944627/8210/i/600/depositphotos_82105954-stock-photo-abstract-blurred-event-with-people.jpg");
