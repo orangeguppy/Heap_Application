@@ -6,7 +6,7 @@ import { Button } from '../Button';
 function CreateEvent() {
 const [eventName, setEventName] = useState('');
 const [eventDescription, setEventDescription] = useState('');
-const [eventType, setEventType] = useState('Competition');
+const [eventType, setEventType] = useState('');
 const [startDate, setEventStartDate] = useState(); //tbc
 const [endDate, setEventEndDate] = useState(); //tbc
 
@@ -98,9 +98,14 @@ const [endTime, setEndTime] = useState();
             <h2> Participants </h2>
             <label> Roles Available</label>
             <input type="text"
-                        value = {eventRoles}
-                        onChange = {(e) => setEventRoles(e.target.value)}
-                        />
+            value = {eventRoles}
+            onChange = {(e) => setEventRoles(e.target.value)}
+            />
+            <label> Minimum Age </label>
+            <input type="number" placeholder="Enter minimum age in years"
+            value={minAge}
+            onChange = {(e) => setMinAge(e.target.value)}
+            />
             <h2> Signups </h2>
             <label> Signups Start Date </label>
                 <input type="date-local"
@@ -119,7 +124,7 @@ const [endTime, setEndTime] = useState();
                 onChange = {(e) => setStartTime(e.target.value)}
                 />
 
-            <label>Start Time</label>
+            <label>End Time</label>
                 <input type="time"
                 value = {endTime}
                 onChange = {(e) => setEndTime(e.target.value)}

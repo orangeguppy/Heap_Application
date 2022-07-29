@@ -1,10 +1,22 @@
 import './ContactUs.css';
 import React, { useState, useEffect } from 'react';
+import { Button } from '../Button';
 
 function ContactUs() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+
+    const handleSubmit = (e) => {
+        console.log("calling");
+        e.preventDefault();
+        fetch(`/create-event/${name}/${email}/${message}`)
+            .then((response) => response.json())
+            .then((data) => {
+            })
+        .catch((err) => {
+            });
+        }
 
     return(
         <div className="contact-wrapper">
@@ -37,6 +49,7 @@ function ContactUs() {
                     </label>
                     <div><br /></div>
                 </form>
+                <Button onClick= {(e) => { handleSubmit(e) }}> Submit</Button>
             </div>
         </div>
     )
